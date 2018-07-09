@@ -1,0 +1,64 @@
+<!-- <form class="example-form"> -->
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="FIRSTNAME" [(ngModel)]="firstName" required>
+  </mat-form-field><br/>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="LASTNAMe" [(ngModel)]="lastName" required>
+  </mat-form-field><br/>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="AGE" [(ngModel)]="age" required>
+  </mat-form-field><br/>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="DEPT" [(ngModel)]="dept" required>
+  </mat-form-field><br/>
+
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="SALARY" [(ngModel)]="salary" required>
+  </mat-form-field><br/>
+
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>&nbsp;
+  <button mat-raised-button color="accent" (click)="onReset()">Reset</button>
+  <!-- <button mat-raised-button color="primary">Primary</button> -->
+<!-- </form> -->
+<!-- {{lists | json}} -->
+<!-- <table border="1">
+  <tr>
+    <th>Firstname</th>
+    <th>LastName</th>
+    <th>Age</th>
+    <th>Dept</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let list of lists">
+    <td>{{list.FirstName}}</td>
+    <td>{{list.LastName}}</td>
+    <td>{{list.Age}}</td>
+    <td>{{list.Dept}}</td>
+    <td>{{list.Salary}}</td>
+  </tr>
+</table> -->
+
+<!-- <table matTable  class="mat-elevation-z8" border="1">
+    <ng-container>
+      <tr>
+        <th matHeaderCell> Id </th>
+        <th matHeaderCell> FirstName </th>
+        <th matHeaderCell> LastName </th>
+        <th matHeaderCell> Age </th>
+        <th matHeaderCell> Dept </th>
+        <th matHeaderCell> Salary </th>
+      </tr>
+      <tr *ngFor="let list of lists">
+        <td matCell> {{list.id}} </td>
+        <td matCell> {{list.FirstName}} </td>
+        <td matCell> {{list.LastName}} </td>
+        <td matCell> {{list.Age}} </td>
+        <td matCell> {{list.Dept}} </td>
+        <td matCell> {{list.Salary}} </td>
+      </tr>
+    </ng-container>
+</table> -->
+  

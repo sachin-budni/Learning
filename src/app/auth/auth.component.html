@@ -1,0 +1,46 @@
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" [(ngModel)]="email" required>
+  </mat-form-field><br/>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" [(ngModel)]="password" required>
+    </mat-form-field><br/>
+    <button mat-raised-button color="primary" (click)="LogIn()">Login</button><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br/>
+    <button mat-raised-button color="primary" (click)="googleLogIn()">Google</button><br/>
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="MobileNumber" [(ngModel)]="mobileNum" required>
+</mat-form-field><br/>
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="OTP" [(ngModel)]="otp" required>
+</mat-form-field><br/>
+<button mat-raised-button color="primary" (click)="signPhone()">Google</button><br/>
+
+
+<div [hidden]="user">
+    <h1>Sign In with Your Phone Number</h1>
+  
+    <label for="phone">Phone Number</label><br>
+    <input type="text" [(ngModel)]="phoneNum.country"  class="input" placeholder="1"    maxlength="3">
+    <input type="text" [(ngModel)]="phoneNum.area"     class="input" placeholder="949"  maxlength="3">
+    <input type="text" [(ngModel)]="phoneNum.prefix"   class="input" placeholder="555"  maxlength="3">
+    <input type="text" [(ngModel)]="phoneNum.line"     class="input" placeholder="5555" maxlength="4">
+  
+    <div id="recaptcha-container"></div>
+  
+    <button (click)="sendLoginCode()">SMS Text Login Code</button>
+  
+    <div *ngIf="windowRef.confirmationResult">
+      <hr>
+      <label for="code">Enter your Verification Code Here</label><br>
+      <input type="text" name="code" [(ngModel)]="verificationCode">
+  
+      <button (click)="verifyLoginCode()">Verify</button>
+    </div>
+  
+  </div>
+  
+  <div *ngIf="user">
+    You have successfully logged in with your phone number!
+  
+    UserId: {{ user?.uid }}
+  
+  </div>
